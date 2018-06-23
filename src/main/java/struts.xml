@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="appAlarmaMVC" namespace="/"
+		extends="struts-default">
+		<action name="grabarClienteAction" method="grabarCliente"
+			class="com.jl.controllers.ClienteController">
+			<result name="success" type="redirectAction">listarClientesAction</result>
+		</action>
+		<action name="listarClientesAction" method="listarClientes"
+			class="com.jl.controllers.ClienteController">
+			<result name="success">/listar_clientes.jsp</result>
+		</action>
+		<action name="actualizarClienteAction"
+			method="actualizarCliente"
+			class="com.jl.controllers.ClienteController">
+			<result name="success">/actualizar_cliente.jsp</result>
+		</action>
+		<action name="actualizarClientePostAction"
+			method="actualizarClientePost"
+			class="com.jl.controllers.ClienteController">
+			<result name="success">/listar_clientes.jsp</result>
+		</action>
+		<action name="eliminarClienteAction" method="eliminarCliente"
+			class="com.jl.controllers.ClienteController">
+			<result name="success">/listar_clientes.jsp</result>
+		</action>
+		<action name="consultarIncidentesAction"
+			method="consultarIncidentes"
+			class="com.jl.controllers.IncidenteController">
+			<result name="success">/listar_incidentes.jsp</result>
+		</action>
+		<action name="loginAction" method="login"
+			class="com.jl.controllers.LoginController">
+			<result name="success">/home.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<action name="actualizarPerfilAction" method="actualizarPerfil"
+			class="com.jl.controllers.ClienteController">
+			<result name="success">/actualizar_perfil.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<action name="actualizarPerfilPostAction"
+			method="actualizarPostPerfil"
+			class="com.jl.controllers.ClienteController">
+			<result name="success">/actualizar_perfil.jsp</result>
+		</action>
+
+		<action name="registrarIncidenteAction"
+			method="registrarIncidente"
+			class="com.jl.controllers.IncidenteController">
+			<result name="success">/get_data.jsp</result>
+		</action>
+		<action name="cancelarIncidenteAction"
+			method="cancelarIncidente"
+			class="com.jl.controllers.IncidenteController">
+			<result name="success">/cancelar_incidente.jsp</result>
+		</action>
+		<action name="cancelarIncidentePostAction"
+			method="cancelarIncidentePost"
+			class="com.jl.controllers.IncidenteController">
+			<result name="success">/listar_incidentes.jsp</result>
+		</action>
+
+		<action name="listarProductosAction" method="listarProductos"
+			class="com.jl.controllers.ProductoController">
+			<result name="success">/listar_productos.jsp</result>
+		</action>
+		<action name="grabarProductoAction" method="grabarProducto"
+			class="com.jl.controllers.ProductoController">
+			<result name="success">/listar_productos.jsp</result>
+		</action>
+		<action name="desactivarProductoAction"
+			method="desactivarProducto"
+			class="com.jl.controllers.ProductoController">
+			<result name="success">/listar_productos.jsp</result>
+		</action>
+		<action name="actualizarProductoAction"
+			method="actualizarProducto"
+			class="com.jl.controllers.ProductoController">
+			<result name="success">/actualizar_producto.jsp</result>
+		</action>
+		<action name="actualizarProductoPostAction"
+			method="actualizarProductoPost"
+			class="com.jl.controllers.ProductoController">
+			<result name="success">/listar_productos.jsp</result>
+		</action>
+		<action name="eliminarProductoAction" method="eliminarProducto"
+			class="com.jl.controllers.ProductoController">
+			<result name="success">/listar_productos.jsp</result>
+		</action>
+
+
+
+		<action name="configurarAlarmaAction" method="configurarAlarma"
+			class="com.jl.controllers.ProductoController">
+			<result name="success">/configurar_alarma.jsp</result>
+		</action>
+
+
+
+	</package>
+</struts>
